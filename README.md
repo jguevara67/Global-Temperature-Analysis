@@ -1,11 +1,37 @@
-# Info
+# Global Temperature Analysis
 
-I along with my partner Steven Alvarado ([GitHub](https://github.com/Steven-Alvarado)) created two algorithms to identify the temperature changes from around the world and to see the effects it had to the land and ocean. The recorded global temperature dataset we used came from UC Berkley. The data in both algorithms are represented quarterly, meaning we use the temperatures of each season for the regression models; 1st quarter -> March | 2nd quarter -> June | 3rd quarter -> September | 4th quarter -> December. The recorded data starts back in 1850 and stops at 2015. The regression models are explained below.
+## Project Overview
+This data science project analyzes the recorded global temperature dataset from UC Berkeley. The aim is to uncover trends and patterns in global temperatures over time using advanced statistical and machine learning techniques.
 
-## Simple Linear Regression
+## Data Source
+The primary dataset used in this project can be found at (https://berkeleyearth.org/data/) with a complete text file of the data at (https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Land_and_Ocean_complete.txt), which includes monthly global temperature records from 1850 to the present. Key columns in the dataset are:
 
-For the simple linear regression model the data is processed by using the dates, Land_Average_Temperature, and Land_And_Ocean_Average_Temperature columns only. We disregarded the use of the uncertainty and max/min temperature columns due to it not giving any relevant information for the model and would provide us incorrect results. From their I made four X values and eight Y values which represent the 4 quarters of each season (the extra 4 Y values represents the Land and Ocean Average temperatures); X representing time and Y representing temperatures. The dataset is split into the training and Test set and the linear regression model is set up on the training set. I print out the predicted test set results for the Land Average Temperatures and the Land_And_Ocean_Average temperatures. The predicted data is used in our scatter plot to provide information on the temperature changes. In both the Land as well as Land_And_Ocean average temperatures showed rising temperature increases proving that climate change is real and is affecting the entire world.
+- `dt` (date)
+- `LandAverageTemperature`
+- `LandAverageTemperatureUncertainty`
+- `LandMaxTemperature`
+- `LandMinTemperature`
+- `LandAndOceanAverageTemperature`
 
-## Random Forest Regression
+## Analysis Notebooks
+Two Jupyter notebooks are included for detailed analysis:
 
-## Performance Metrics of SLR and RFR
+1. **SimpleLinearRegression.ipynb**
+   - Focus: Linear Regression analysis on temperature trends.
+   - Contains 67 cells, including 26 markdown explanations and 41 code cells.
+   - Key Features: Data loading, preprocessing, linear regression modeling, and results visualization.
+
+2. **RandomForest.ipynb**
+   - Focus: Using Random Forest algorithm for more complex pattern recognition.
+   - Contains 21 cells, with 9 markdown explanations and 12 code cells.
+   - Key Features: Advanced modeling, feature importance analysis, and predictive accuracy assessment.
+
+## How to Run
+To run the analysis:
+1. Ensure Python 3.x is installed with the required libraries: pandas, numpy, sklearn, matplotlib.
+2. Clone the repository and navigate to the project directory.
+3. Open the Jupyter notebooks in a Jupyter environment and execute cells in sequence.
+
+## Contributors
+[https://github.com/dlaskowski23]
+[https://github.com/Steven-Alvarado]
